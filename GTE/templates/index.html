@@ -1,16 +1,112 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html lang = "en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>this is a test page</title>
-    </head>
-    <body>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="{% static 'styles.css' %}" rel="stylesheet" type="text/css" />
 
-        <h1>this is a test page</h1>
+</head>
+<body>
+    <div class="container">
+        <div class="chessboard">
+        <!-- Rows -->
+            <div class="row corner">
+                <!-- Columns -->
+                <div class="square white corner-top-left"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square black corner-bottom-left"></div>
+            </div>
+            <div class="row">
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+            </div>
+            <div class="row">
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+            </div>
+            <div class="row">
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+            </div>
+            <div class="row">
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+            </div>
+            <div class="row">
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+            </div>
+            <div class="row">
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+            </div>
+            <div class="row corner">
+                <div class="square black corner-top-right"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square white"></div>
+                <div class="square black"></div>
+                <div class="square white corner-bottom-right"></div>
+            </div>
+        </div>
+
+        <div class="moves scroll"></div>
+
+        {% comment %} <label for="move_input">PGN: </label> {% endcomment %}
+        <textarea type="text" name="move_input"  placeholder="Enter your PGN here..." class="textarea"></textarea>
 
 
-        
+    </div>
+    <div class="button-div">
+        <button type="button" class="btn">Submit</button>
+    </div>
 
-    </body>
+
+</body>
 </html>
