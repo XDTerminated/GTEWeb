@@ -12,84 +12,84 @@
     <div class="container">
         <div class="chessboard">
             <div class="row">
-                <div id="a8" class="square black corner-top-left"><img draggable="false" src="{% static 'chess_pieces/b_rook.png' %}" width="60" height="60"/></div>
-                <div id="a7" class="square white"><img draggable="false" src="{% static 'chess_pieces/b_pawn.png' %}" width="60" height="60"/></div>
-                <div id="a6" class="square black"></div>
-                <div id="a5" class="square white"></div>
-                <div id="a4" class="square black"></div>
-                <div id="a3" class="square white"></div>
-                <div id="a2" class="square black"><img draggable="false" src="{% static 'chess_pieces/w_pawn.png' %}" width="60" height="60"/></div>
-                <div id="a1" class="square white corner-bottom-left"><img draggable="false" src="{% static 'chess_pieces/w_rook.png' %}" width="60" height="60"/></div>
+                <div id="a8" class="square white corner-top-left"><img id="test" draggable="false" src="{% static 'chess_pieces/b_rook.png' %}" width="60" height="60"/></div>
+                <div id="a7" class="square black"><img draggable="false" src="{% static 'chess_pieces/b_pawn.png' %}" width="60" height="60"/></div>
+                <div id="a6" class="square white"></div>
+                <div id="a5" class="square black"></div>
+                <div id="a4" class="square white"></div>
+                <div id="a3" class="square black"></div>
+                <div id="a2" class="square white"><img draggable="false" src="{% static 'chess_pieces/w_pawn.png' %}" width="60" height="60"/></div>
+                <div id="a1" class="square black corner-bottom-left"><img draggable="false" src="{% static 'chess_pieces/w_rook.png' %}" width="60" height="60"/></div>
             </div>
             <div class="row">
-                <div id="b8" class="square white"><img draggable="false" src="{% static 'chess_pieces/b_knight.png' %}" width="60" height="60"/></div>
-                <div id="b7" class="square black"><img draggable="false" src="{% static 'chess_pieces/b_pawn.png' %}" width="60" height="60"/></div>
-                <div id="b6" class="square white"></div>
-                <div id="b5" class="square black"></div>
-                <div id="b4" class="square white"></div>
-                <div id="b3" class="square black"></div>
-                <div id="b2" class="square white"><img draggable="false" src="{% static 'chess_pieces/w_pawn.png' %}" width="60" height="60"/></div>
-                <div id="b1" class="square black"><img draggable="false" src="{% static 'chess_pieces/w_knight.png' %}" width="60" height="60"/></div>
+                <div id="b8" class="square black"><img draggable="false" src="{% static 'chess_pieces/b_knight.png' %}" width="60" height="60"/></div>
+                <div id="b7" class="square white"><img draggable="false" src="{% static 'chess_pieces/b_pawn.png' %}" width="60" height="60"/></div>
+                <div id="b6" class="square black"></div>
+                <div id="b5" class="square white"></div>
+                <div id="b4" class="square black"></div>
+                <div id="b3" class="square white"></div>
+                <div id="b2" class="square black"><img draggable="false" src="{% static 'chess_pieces/w_pawn.png' %}" width="60" height="60"/></div>
+                <div id="b1" class="square white"><img draggable="false" src="{% static 'chess_pieces/w_knight.png' %}" width="60" height="60"/></div>
             </div>
             <div class="row">
-                <div id="c8" class="square black"><img draggable="false" src="{% static 'chess_pieces/b_bishop.png' %}" width="60" height="60"/></div>
-                <div id="c7" class="square white"><img draggable="false" src="{% static 'chess_pieces/b_pawn.png' %}" width="60" height="60"/></div>
-                <div id="c6" class="square black"></div>
-                <div id="c5" class="square white"></div>
-                <div id="c4" class="square black"></div>
-                <div id="c3" class="square white"></div>
-                <div id="c2" class="square black"><img draggable="false" src="{% static 'chess_pieces/w_pawn.png' %}" width="60" height="60"/></div>
-                <div id="c1" class="square white"><img draggable="false" src="{% static 'chess_pieces/w_bishop.png' %}" width="60" height="60"/></div>
+                <div id="c8" class="square white"><img draggable="false" src="{% static 'chess_pieces/b_bishop.png' %}" width="60" height="60"/></div>
+                <div id="c7" class="square black"><img draggable="false" src="{% static 'chess_pieces/b_pawn.png' %}" width="60" height="60"/></div>
+                <div id="c6" class="square white"></div>
+                <div id="c5" class="square black"></div>
+                <div id="c4" class="square white"></div>
+                <div id="c3" class="square black"></div>
+                <div id="c2" class="square white"><img draggable="false" src="{% static 'chess_pieces/w_pawn.png' %}" width="60" height="60"/></div>
+                <div id="c1" class="square black"><img draggable="false" src="{% static 'chess_pieces/w_bishop.png' %}" width="60" height="60"/></div>
             </div>
             <div class="row">
-                <div id="d8" class="square white"><img draggable="false" src="{% static 'chess_pieces/b_king.png' %}" width="60" height="60"/></div>
-                <div id="d7" class="square black"><img draggable="false" src="{% static 'chess_pieces/b_pawn.png' %}" width="60" height="60"/></div>
-                <div id="d6" class="square white"></div>
-                <div id="d5" class="square black"></div>
-                <div id="d4" class="square white"></div>
-                <div id="d3" class="square black"></div>
-                <div id="d2" class="square white"><img draggable="false" src="{% static 'chess_pieces/w_pawn.png' %}" width="60" height="60"/></div>
-                <div id="d1" class="square black"><img draggable="false" src="{% static 'chess_pieces/w_king.png' %}" width="60" height="60"/></div>
+                <div id="d8" class="square black"><img draggable="false" src="{% static 'chess_pieces/b_queen.png' %}" width="60" height="60"/></div>
+                <div id="d7" class="square white"><img draggable="false" src="{% static 'chess_pieces/b_pawn.png' %}" width="60" height="60"/></div>
+                <div id="d6" class="square black"></div>
+                <div id="d5" class="square white"></div>
+                <div id="d4" class="square black"></div>
+                <div id="d3" class="square white"></div>
+                <div id="d2" class="square black"><img draggable="false" src="{% static 'chess_pieces/w_pawn.png' %}" width="60" height="60"/></div>
+                <div id="d1" class="square white"><img draggable="false" src="{% static 'chess_pieces/w_queen.png' %}" width="60" height="60"/></div>
             </div>
             <div class="row">
-                <div id="e8" class="square black"><img draggable="false" src="{% static 'chess_pieces/b_queen.png' %}" width="60" height="60"/></div>
-                <div id="e7" class="square white"><img draggable="false" src="{% static 'chess_pieces/b_pawn.png' %}" width="60" height="60"/></div>
-                <div id="e6" class="square black"></div>
-                <div id="e5" class="square white"></div>
-                <div id="e4" class="square black"></div>
-                <div id="e3" class="square white"></div>
-                <div id="e2" class="square black"><img draggable="false" src="{% static 'chess_pieces/w_pawn.png' %}" width="60" height="60"/></div>
-                <div id="e1" class="square white"><img draggable="false" src="{% static 'chess_pieces/w_queen.png' %}" width="60" height="60"/></div>
+                <div id="e8" class="square white"><img draggable="false" src="{% static 'chess_pieces/b_king.png' %}" width="60" height="60"/></div>
+                <div id="e7" class="square black"><img draggable="false" src="{% static 'chess_pieces/b_pawn.png' %}" width="60" height="60"/></div>
+                <div id="e6" class="square white"></div>
+                <div id="e5" class="square black"></div>
+                <div id="e4" class="square white"></div>
+                <div id="e3" class="square black"></div>
+                <div id="e2" class="square white"><img draggable="false" src="{% static 'chess_pieces/w_pawn.png' %}" width="60" height="60"/></div>
+                <div id="e1" class="square black"><img draggable="false" src="{% static 'chess_pieces/w_king.png' %}" width="60" height="60"/></div>
             </div>
             <div class="row">
-                <div id="f8" class="square white"><img draggable="false" src="{% static 'chess_pieces/b_bishop.png' %}" width="60" height="60"/></div>
-                <div id="f7" class="square black"><img draggable="false" src="{% static 'chess_pieces/b_pawn.png' %}" width="60" height="60"/></div>
-                <div id="f6" class="square white"></div>
-                <div id="f5" class="square black"></div>
-                <div id="f4" class="square white"></div>
-                <div id="f3" class="square black"></div>
-                <div id="f2" class="square white"><img draggable="false" src="{% static 'chess_pieces/w_pawn.png' %}" width="60" height="60"/></div>
-                <div id="f1" class="square black"><img draggable="false" src="{% static 'chess_pieces/w_bishop.png' %}" width="60" height="60"/></div>
+                <div id="f8" class="square black"><img draggable="false" src="{% static 'chess_pieces/b_bishop.png' %}" width="60" height="60"/></div>
+                <div id="f7" class="square white"><img draggable="false" src="{% static 'chess_pieces/b_pawn.png' %}" width="60" height="60"/></div>
+                <div id="f6" class="square black"></div>
+                <div id="f5" class="square white"></div>
+                <div id="f4" class="square black"></div>
+                <div id="f3" class="square white"></div>
+                <div id="f2" class="square black"><img draggable="false" src="{% static 'chess_pieces/w_pawn.png' %}" width="60" height="60"/></div>
+                <div id="f1" class="square white"><img draggable="false" src="{% static 'chess_pieces/w_bishop.png' %}" width="60" height="60"/></div>
             </div>
             <div class="row">
-                <div id="g8" class="square black"><img draggable="false" src="{% static 'chess_pieces/b_knight.png' %}" width="60" height="60"/></div>
-                <div id="g7" class="square white"><img draggable="false" src="{% static 'chess_pieces/b_pawn.png' %}" width="60" height="60"/></div>
-                <div id="g6" class="square black"></div>
-                <div id="g5" class="square white"></div>
-                <div id="g4" class="square black"></div>
-                <div id="g3" class="square white"></div>
-                <div id="g2" class="square black"><img draggable="false" src="{% static 'chess_pieces/w_pawn.png' %}" width="60" height="60"/></div>
-                <div id="g1" class="square white"><img draggable="false" src="{% static 'chess_pieces/w_knight.png' %}" width="60" height="60"/></div>
+                <div id="g8" class="square white"><img draggable="false" src="{% static 'chess_pieces/b_knight.png' %}" width="60" height="60"/></div>
+                <div id="g7" class="square black"><img draggable="false" src="{% static 'chess_pieces/b_pawn.png' %}" width="60" height="60"/></div>
+                <div id="g6" class="square white"></div>
+                <div id="g5" class="square black"></div>
+                <div id="g4" class="square white"></div>
+                <div id="g3" class="square black"></div>
+                <div id="g2" class="square white"><img draggable="false" src="{% static 'chess_pieces/w_pawn.png' %}" width="60" height="60"/></div>
+                <div id="g1" class="square black"><img draggable="false" src="{% static 'chess_pieces/w_knight.png' %}" width="60" height="60"/></div>
             </div>
             <div class="row">
-                <div id="h8" class="square white corner-top-right"><img draggable="false" src="{% static 'chess_pieces/b_rook.png' %}" width="60" height="60"/></div>
-                <div id="h7" class="square black"><img draggable="false" src="{% static 'chess_pieces/b_pawn.png' %}" width="60" height="60"/></div>
-                <div id="h6" class="square white"></div>
-                <div id="h5" class="square black"></div>
-                <div id="h4" class="square white"></div>
-                <div id="h3" class="square black"></div>
-                <div id="h2" class="square white"><img draggable="false" src="{% static 'chess_pieces/w_pawn.png' %}" width="60" height="60"/></div>
-                <div id="h1" class="square black corner-bottom-right"><img draggable="false" src="{% static 'chess_pieces/w_rook.png' %}" width="60" height="60"/></div>
+                <div id="h8" class="square black corner-top-right"><img draggable="false" src="{% static 'chess_pieces/b_rook.png' %}" width="60" height="60"/></div>
+                <div id="h7" class="square white"><img draggable="false" src="{% static 'chess_pieces/b_pawn.png' %}" width="60" height="60"/></div>
+                <div id="h6" class="square black"></div>
+                <div id="h5" class="square white"></div>
+                <div id="h4" class="square black"></div>
+                <div id="h3" class="square white"></div>
+                <div id="h2" class="square black"><img draggable="false" src="{% static 'chess_pieces/w_pawn.png' %}" width="60" height="60"/></div>
+                <div id="h1" class="square white corner-bottom-right"><img draggable="false" src="{% static 'chess_pieces/w_rook.png' %}" width="60" height="60"/></div>
             </div>
         </div>
 

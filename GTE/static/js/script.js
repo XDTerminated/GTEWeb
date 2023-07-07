@@ -17,6 +17,8 @@ for (let i = 1; i <= 8; i++) {
     squares.push(temp);
 }
 
+console.log(squares[0]);
+
 // Variables
 var chess = new Chess();
 
@@ -24,6 +26,7 @@ var chess = new Chess();
 export function getPGN() {
     let buttonDict;
     var value = PGN.value;
+    setPosition("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1");
 
     try {
         chess.loadPgn(value);
@@ -38,19 +41,21 @@ export function getPGN() {
 }
 
 export function getPosition(buttonDict) {
-    let buttons = document.querySelectorAll('button');
+    let buttons = document.querySelectorAll('.white-move,.black-move');
+
+    let fenString;
     buttons.forEach(function(button) {
         button.addEventListener('click', function() {
           // Get the clicked button
             var clickedButton = event.target;
           // Get the FEN string from the Map using the clicked button as the key
-            var fenString = buttonDict.get(clickedButton);
+            fenString = buttonDict.get(clickedButton);
           // Use the retrieved FEN string as desired
             console.log("FEN string:", fenString);
+            setPosition(fenString);
         });
     });
 
-    return fen;
 }
 
 function setMoves(history) {
@@ -133,7 +138,78 @@ function setMoves(history) {
 }
 
 function setPosition(position) {
-    
+
+
+    for (let i = 0; i < squares.length; i++) {
+        for (let j = 0; j < squares[i].length; j++) {
+            squares[i][j].innerHTML = "";
+
+        }
+    }
+
+    console.log(squares[0][0]);
+
+    let rank = 7;
+    let file = 0;
+    for (let i = 0; i < position.length; i++) {
+        if (position[i] == " ") {
+            break;
+        }
+        if (position[i] == "/") {
+            file = 0;
+            rank--;
+        } else if (position[i] === "r") {
+            let a = document.createElement("img"); a.src = "/static/chess_pieces/b_rook.png"; a.draggable = false; a.width = 60; a.height = 60;
+            squares[rank][file].appendChild(a);
+            file++;
+        } else if (position[i] === "n") {
+            let a = document.createElement("img"); a.src = "/static/chess_pieces/b_knight.png"; a.draggable = false; a.width = 60; a.height = 60;
+            squares[rank][file].appendChild(a);
+            file++;
+        } else if (position[i] === "b") {
+            let a = document.createElement("img"); a.src = "/static/chess_pieces/b_bishop.png"; a.draggable = false; a.width = 60; a.height = 60;
+            squares[rank][file].appendChild(a);
+            file++;
+        } else if (position[i] === "q") {
+            let a = document.createElement("img"); a.src = "/static/chess_pieces/b_queen.png"; a.draggable = false; a.width = 60; a.height = 60;
+            squares[rank][file].appendChild(a);
+            file++;
+        } else if (position[i] === "k") {
+            let a = document.createElement("img"); a.src = "/static/chess_pieces/b_king.png"; a.draggable = false; a.width = 60; a.height = 60;
+            squares[rank][file].appendChild(a);
+            file++;
+        } else if (position[i] === "p") {
+            let a = document.createElement("img"); a.src = "/static/chess_pieces/b_pawn.png"; a.draggable = false; a.width = 60; a.height = 60;
+            squares[rank][file].appendChild(a);
+            file++;
+        } else if (position[i] === "R") {
+            let a = document.createElement("img"); a.src = "/static/chess_pieces/w_rook.png"; a.draggable = false; a.width = 60; a.height = 60;
+            squares[rank][file].appendChild(a);
+            file++;
+        } else if (position[i] === "N") {
+            let a = document.createElement("img"); a.src = "/static/chess_pieces/w_knight.png"; a.draggable = false; a.width = 60; a.height = 60;
+            squares[rank][file].appendChild(a);
+            file++;
+        } else if (position[i] === "B") {
+            let a = document.createElement("img"); a.src = "/static/chess_pieces/w_bishop.png"; a.draggable = false; a.width = 60; a.height = 60;
+            squares[rank][file].appendChild(a);
+            file++;
+        } else if (position[i] === "Q") {
+            let a = document.createElement("img"); a.src = "/static/chess_pieces/w_queen.png"; a.draggable = false; a.width = 60; a.height = 60;
+            squares[rank][file].appendChild(a);
+            file++;
+        } else if (position[i] === "K") {
+            let a = document.createElement("img"); a.src = "/static/chess_pieces/w_king.png"; a.draggable = false; a.width = 60; a.height = 60;
+            squares[rank][file].appendChild(a);
+            file++;
+        } else if (position[i] === "P") {
+            let a = document.createElement("img"); a.src = "/static/chess_pieces/w_pawn.png"; a.draggable = false; a.width = 60; a.height = 60;
+            squares[rank][file].appendChild(a);
+            file++;
+        } else if (!isNaN(position[i])) {
+            file+=parseInt(position[i]);
+        }
+    }
 }
 
 
