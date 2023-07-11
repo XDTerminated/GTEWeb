@@ -38,6 +38,14 @@ export function getPGN() {
     }
 
     getPosition(buttonDict);
+    fetch("prediction/", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+            "X-CSRFToken": getCookie("csrftoken") // Include CSRF token for Django
+        },
+        body: "data=" + encodeURIComponent(value)
+    })
 }
 
 export function getPosition(buttonDict) {
@@ -82,7 +90,7 @@ function setMoves(history) {
         chessTemp.move(blackMove);
         let blackFen = chessTemp.fen();
 
-        const moveDiv  = document.createElement("div");
+        const moveDiv = document.createElement("div");
         moveDiv.classList.add("move");
 
         const moveWhite = document.createElement("button");
@@ -212,5 +220,17 @@ function setPosition(position) {
     }
 }
 
-
-
+function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie !== "") {
+        var cookies = document.cookie.split(";");
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === name + "=") {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}

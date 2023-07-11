@@ -106,8 +106,20 @@ img{
     background-color: #555451;
 }
 
+.white-move:focus {
+    box-shadow: none;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
 .black-move:hover {
     background-color: #555451;
+}
+
+.black-move:focus {
+    box-shadow: none;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
 }
 /* TEST */
 
@@ -196,4 +208,10 @@ img{
 
 .click {
     cursor: pointer;
+}
+
+.click:focus {
+    box-shadow: none;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
 }

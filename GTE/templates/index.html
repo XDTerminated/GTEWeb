@@ -93,28 +93,14 @@
             </div>
         </div>
 
-        <div id="move" class="moves scroll">
-            {% comment %} <div id="move" class="move">
-                <button onclick="lib.setPosition()" type="button" class="white-move">&nbsp;1. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e4</button>
-                <button onclick="lib.setPosition()" type="button" class="black-move">e5</button>
-            </div> {% endcomment %}
-        </div>
-
-        <textarea type="text" name="move_input"  placeholder="Enter your PGN here..." id="pgn" class="textarea"></textarea>
+        <div id="move" class="moves scroll"></div>
+        {% csrf_token %}
+        <textarea method="post" type="text" name="move_input"  placeholder="Enter your PGN here..." id="pgn" class="textarea"></textarea>
 
 
     </div>
     <div class="button-div">
         <button onclick="lib.getPGN()" type="button" class="btn">Guess</button>
-    </div>
-
-    <div class="game">
-        <div class="controlls">
-            <button type="button" style="border: 0; background: transparent" class="click"><img draggable="false" src="{% static 'chevron/left-chevron-double.png' %}" width="15" height="25"/></button>
-            <button type="button" style="border: 0; background: transparent" class="click"><img draggable="false" src="{% static 'chevron/left-chevron.png' %}" width="15" height="25" /></button>
-            <button type="button" style="border: 0; background: transparent" class="click"><img draggable="false" src="{% static 'chevron/right-chevron.png' %}" width="15" height="25" /></button>
-            <button type="button" style="border: 0; background: transparent" class="click"><img draggable="false" src="{% static 'chevron/right-chevron-double.png' %}" width="15" height="25" /></button>
-        </div>
     </div>
 
     <script type="text/javascript" src="{% static 'dist/bundle.js' %}" ></script>
