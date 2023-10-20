@@ -100,7 +100,11 @@
 
     </div>
     <div class="button-div">
-        <button onclick="lib.getPGN()" type="button" class="btn">Guess</button>
+        <button id = "processdata" onclick="lib.getPGN()" type="button" class="btn">Guess</button>
+    </div>
+
+    <div id="guess-div" class="guess-div">
+        Guess: 
     </div>
 
     <script type="text/javascript" src="{% static 'dist/bundle.js' %}" ></script>

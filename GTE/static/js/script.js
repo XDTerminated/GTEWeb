@@ -35,7 +35,11 @@ export function getPGN() {
         buttonDict = setMoves(chess.history());
     } catch (e) {
         console.error(e);
+        return;
     }
+
+    document.getElementById('guess-div').innerText = "Processing (This could take up to 2 minutes because stockfish is slow :))...";
+
 
     getPosition(buttonDict);
     fetch("prediction/", {
@@ -46,6 +50,13 @@ export function getPGN() {
         },
         body: "data=" + encodeURIComponent(value)
     })
+    .then(response => response.json())
+        .then(data => {
+            // Handle the processed data and update the HTML
+            document.getElementById('guess-div').innerText = "Guess: " + data.result;
+        });
+
+
 }
 
 export function getPosition(buttonDict) {
